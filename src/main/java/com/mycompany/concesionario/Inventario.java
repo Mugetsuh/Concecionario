@@ -27,7 +27,7 @@ public class Inventario {
     public ArrayList<Vehiculo> agregar(ArrayList<Vehiculo> listaVehiculos) {
         System.out.println("Menu para agregar un Vehiculo.");
         do {
-            System.out.println("¿Que carro desea agregar? ");
+            System.out.println("¿Que tipo de Vehiculo desea agregar? ");
             System.out.println("1. Estandar.");
             System.out.println("2. Maquinaria.");
             System.out.println("3. Deportivo.");
