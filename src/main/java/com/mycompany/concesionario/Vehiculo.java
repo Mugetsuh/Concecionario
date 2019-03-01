@@ -10,26 +10,31 @@ package com.mycompany.concesionario;
  * @author orlan
  */
 public class Vehiculo {
+    
+    protected String categoria;
     protected String marca;
     protected String referencia;
     protected String color;
     protected int modelo;
+    protected String alimentacion;
+    protected String transmision;
+    protected int numRuedas;
     protected float precio;
-    protected int numAsientos;
-    protected String tipoAlimentacion;
-    protected String tipoTransmision;
+    protected int asientos;
 
-    public Vehiculo(String marca, String referencia, String color, int modelo, float precio, int numAsientos, String tipoAlimentacion, String tipoTransmision) {
+    public Vehiculo(String marca, String referencia, String color, int modelo, float precio, int asientos, String alimentacion, String transmision, int numRuedas, String categoria) {
         this.marca = marca;
         this.referencia = referencia;
         this.color = color;
         this.modelo = modelo;
         this.precio = precio;
-        this.numAsientos = numAsientos;
-        this.tipoAlimentacion = tipoAlimentacion;
-        this.tipoTransmision = tipoTransmision;
+        this.asientos = asientos;
+        this.alimentacion = alimentacion;
+        this.transmision = transmision;
+        this.numRuedas = numRuedas;
+        this.categoria = categoria;
     }
-
+    
     public String getMarca() {
         return marca;
     }
@@ -70,28 +75,44 @@ public class Vehiculo {
         this.precio = precio;
     }
 
-    public int getNumAsientos() {
-        return numAsientos;
+    public int getAsientos() {
+        return asientos;
     }
 
-    public void setNumAsientos(int numAsientos) {
-        this.numAsientos = numAsientos;
+    public void setAsientos(int asientos) {
+        this.asientos = asientos;
     }
 
-    public String getTipoAlimentacion() {
-        return tipoAlimentacion;
+    public String getAlimentacion() {
+        return alimentacion;
     }
 
-    public void setTipoAlimentacion(String tipoAlimentacion) {
-        this.tipoAlimentacion = tipoAlimentacion;
+    public void setAlimentacion(String alimentacion) {
+        this.alimentacion = alimentacion;
     }
 
-    public String getTipoTransmision() {
-        return tipoTransmision;
+    public String getTransmision() {
+        return transmision;
     }
 
-    public void setTipoTransmision(String tipoTransmision) {
-        this.tipoTransmision = tipoTransmision;
+    public void setTransmision(String transmision) {
+        this.transmision = transmision;
+    }
+
+    public int getNumRuedas() {
+        return numRuedas;
+    }
+
+    public void setNumRuedas(int numRuedas) {
+        this.numRuedas = numRuedas;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
     
     
