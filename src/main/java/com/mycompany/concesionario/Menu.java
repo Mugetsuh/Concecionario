@@ -14,13 +14,14 @@ import java.util.Scanner;
  */
 public class Menu {
     Scanner sc = new Scanner(System.in);
-    ArrayList<Vehiculo>vehiculo; 
+    ArrayList<Vehiculo> listaVehiculo; 
     public void iniciar(){
-        vehiculo=new ArrayList<>();
-        principal(vehiculo);
+        listaVehiculo=new ArrayList<>();
+        principal(listaVehiculo);
     }
     
-    public void principal(ArrayList<Vehiculo> vehiculo){
+    public void principal(ArrayList<Vehiculo> listaVehiculo){
+        Inventario inv=new Inventario();
         int opcion = 0;
         System.out.println("Bienvenido al concesionario UdeC.");
         System.out.println("Que actividad desea realizar: ");
@@ -30,7 +31,22 @@ public class Menu {
         System.out.println("4. Ver Vehiculo menos Vendido.");
         System.out.println("Digite la opcion: ");
         opcion = sc.nextInt();
-        
+        switch (opcion){
+            case 1:
+                listaVehiculo=inv.agregar(listaVehiculo);
+                break;
+            case 2:
+                //ventas
+                break;
+            case 3:
+                //vehiculo mas vendido
+                break;
+            case 4:
+                break;
+            default:
+                principal(listaVehiculo);
+            
+        }
         
     }
 }

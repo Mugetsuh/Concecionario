@@ -24,7 +24,7 @@ public class Inventario {
     int modelo, numRuedas, asientos, opcion, marchas;
     float precio;
 
-    public void agregar(ArrayList<Vehiculo> listaVehiculos) {
+    public ArrayList<Vehiculo> agregar(ArrayList<Vehiculo> listaVehiculos) {
         System.out.println("Menu para agregar un Vehiculo.");
         do {
             System.out.println("¿Que carro desea agregar? ");
@@ -49,13 +49,13 @@ public class Inventario {
                     listaVehiculos=personalizado(listaVehiculos);
                     break;
                 case 5:
-                    m.principal(listaVehiculos);
+                    break;
                 default:
                     System.out.println("Opcion no valida");
                     break;
             }
         } while (opcion != 5);
-        m.principal(listaVehiculos);
+        return listaVehiculos;
     }
 
     private ArrayList<Vehiculo> estandar(ArrayList<Vehiculo> listaVehiculos) {
