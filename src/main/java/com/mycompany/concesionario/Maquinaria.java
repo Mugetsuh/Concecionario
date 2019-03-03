@@ -19,6 +19,8 @@ public class Maquinaria extends Vehiculo{
      * Variable encargada de indicar las velocidades del vehiculo
      */
     private int velocidades;
+
+    
     /**
      * Contructor encargado de recibir los atributos de la clase padre vehiculo e inicializar los propios
      * @param capacidadCarga indica capacidad en toneladas soportadas por el vehiculo
@@ -34,8 +36,8 @@ public class Maquinaria extends Vehiculo{
      * @param numRuedas indica cantidad de ruebas del vehiculo
      * @param categoria indica la categoria del vehiculo
      */
-    public Maquinaria(int capacidadCarga, int velocidades, String marca, String referencia, String color, int modelo, float precio, int asientos, String alimentacion, String transmision, int numRuedas, String categoria) {
-        super(marca, referencia, color, modelo, precio, asientos, alimentacion, transmision, numRuedas, categoria);
+    public Maquinaria(int capacidadCarga, int velocidades, String categoria, String marca, String referencia, String color, int modelo, String alimentacion, String transmision, int numRuedas, float precio, int asientos, int cantidad) {
+        super(categoria, marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);
         this.capacidadCarga = capacidadCarga;
         this.velocidades = velocidades;
     }

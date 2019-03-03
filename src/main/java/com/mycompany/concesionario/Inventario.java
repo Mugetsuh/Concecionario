@@ -14,17 +14,16 @@ import java.util.Scanner;
  * @version 1.0
  */
 public class Inventario {
-    private int stockMin;
-    private int cantidadVehiculo;
+    public final int stockMin=2;
     Scanner sc = new Scanner(System.in);
     public Vehiculo vehiculo;
 
 
     String categoria, marca, referencia, color, alimentacion, transmision;
-    int modelo, numRuedas, asientos, opcion, marchas;
+    int modelo, numRuedas, asientos, opcion, marchas, cantidad;
     float precio;
     
-    public ArrayList<Vehiculo> agregar(ArrayList<Vehiculo> listaVehiculos) {
+    public Listas agregar(Listas listas) {
         System.out.println("Menu para agregar un Vehiculo.");
         do {
             System.out.println("¿Que tipo de Vehiculo desea agregar? ");
@@ -37,16 +36,16 @@ public class Inventario {
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
-                    listaVehiculos = estandar(listaVehiculos);
+                    listas = estandar(listas);
                     break;
                 case 2:
-                    listaVehiculos = maquinaria(listaVehiculos);
+                    listas = maquinaria(listas);
                     break;
                 case 3:
-                    listaVehiculos = deportivo(listaVehiculos);
+                    listas = deportivo(listas);
                     break;
                 case 4:
-                    listaVehiculos=personalizado(listaVehiculos);
+                    listas=personalizado(listas);
                     break;
                 case 5:
                     break;
@@ -55,10 +54,17 @@ public class Inventario {
                     break;
             }
         } while (opcion != 5);
-        return listaVehiculos;
+        return listas;
     }
-
-    private ArrayList<Vehiculo> estandar(ArrayList<Vehiculo> listaVehiculos) {
+    public Listas descontarAuto (Listas listas,int posicion, int cantidadVeh){
+        listas.vehiculos.get(posicion).cantidad=listas.vehiculos.get(posicion).cantidad-cantidadVeh;
+        if(listas.vehiculos.get(posicion).cantidad<=stockMin){
+            System.err.println("Debe Solicitar Vehiculos de la marca:"+listas.vehiculos.get(posicion).marca+", de la referencia: "+
+                    listas.vehiculos.get(posicion).referencia+", a su Proveedor");
+        }
+        return listas;
+    }
+    private Listas estandar(Listas listas) {
         categoria = "Estandar";
         System.out.println("Solicitud de Datos para Vehiculo " + categoria);
         System.out.println("Digite la Marca del Vehiculo: ");
@@ -81,12 +87,14 @@ public class Inventario {
         asientos = sc.nextInt();
         System.out.println("Digite la Cantidad de Marchas del Vehiculo");
         marchas = sc.nextInt();
-        vehiculo = new Estandar(marchas, marca, referencia, color, modelo, precio, asientos, alimentacion, transmision, numRuedas, categoria);
-        listaVehiculos.add(vehiculo);
-        return listaVehiculos;
+        System.out.println("Digite la Cantidad de Vehiculos que va ha ingresar de "+marca+": ");
+        cantidad = sc.nextInt();
+        vehiculo = new Estandar(marchas, categoria, marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);
+        listas.vehiculos.add(vehiculo);
+        return listas;
     }
 
-    private ArrayList<Vehiculo> maquinaria(ArrayList<Vehiculo> listaVehiculos) {
+    private Listas maquinaria(Listas listas) {
         categoria = "Maquinaria";
         System.out.println("Solicitud de Datos para Vehiculo " + categoria);
         System.out.println("Digite la Marca del Vehiculo: ");
@@ -111,12 +119,14 @@ public class Inventario {
         int carga = sc.nextInt();
         System.out.println("Digite la Cantidad de Marchas del Vehiculo");
         marchas = sc.nextInt();
-        vehiculo = new Maquinaria(carga, marchas, marca, referencia, color, modelo, precio, asientos, alimentacion, transmision, numRuedas, categoria);
-        listaVehiculos.add(vehiculo);
-        return listaVehiculos;
+        System.out.println("Digite la Cantidad de Vehiculos que va ha ingresar de "+marca+": ");
+        cantidad = sc.nextInt();
+        vehiculo = new Maquinaria(carga, marchas, categoria, marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);
+        listas.vehiculos.add(vehiculo);
+        return listas;
     }
 
-    private ArrayList<Vehiculo> deportivo(ArrayList<Vehiculo> listaVehiculos) {
+    private Listas deportivo(Listas listas) {
         categoria = "Deportivo";
         System.out.println("Solicitud de Datos para Vehiculo " + categoria);
         System.out.println("Digite la Marca del Vehiculo: ");
@@ -137,14 +147,16 @@ public class Inventario {
         precio = sc.nextFloat();
         System.out.println("Digite el Numero de Asientos del vehiculo: ");
         asientos = sc.nextInt();
-        System.out.println("Digite si el Vehiculo es convertible T/F: ");
-        Boolean convertible = sc.nextBoolean();
-        vehiculo = new Deportivo(convertible, marca, referencia, color, modelo, precio, asientos, alimentacion, transmision, numRuedas, categoria);
-        listaVehiculos.add(vehiculo);
-        return listaVehiculos;
+        System.out.println("Digite si el Vehiculo es convertible si/no: ");
+        String convertible = sc.next();
+        System.out.println("Digite la Cantidad de Vehiculos que va ha ingresar de "+marca+": ");
+        cantidad = sc.nextInt();
+        vehiculo = new Deportivo(convertible, categoria, marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);
+        listas.vehiculos.add(vehiculo);
+        return listas;
     }
 
-    private ArrayList<Vehiculo> personalizado(ArrayList<Vehiculo> listaVehiculos) {
+    private Listas personalizado(Listas listas) {
         categoria = "Personalizado";
         System.out.println("Solicitud de Datos para Vehiculo " + categoria);
         System.out.println("Digite la Marca del Vehiculo: ");
@@ -171,8 +183,10 @@ public class Inventario {
         String puertas = sc.next();
         System.out.println("digite la forma de los Tubos de Escape del Vehiculo: ");
         String tubos = sc.next();
-        vehiculo = new Personalizado(altura, puertas, tubos, marca, referencia, color, modelo, precio, asientos, alimentacion, transmision, numRuedas, categoria);
-        listaVehiculos.add(vehiculo);
-        return listaVehiculos;
+        System.out.println("Digite la Cantidad de Vehiculos que va ha ingresar de "+marca+": ");
+        cantidad = sc.nextInt();
+        vehiculo = new Personalizado(altura, puertas, tubos, categoria, marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);
+        listas.vehiculos.add(vehiculo);
+        return listas;
     }
 }

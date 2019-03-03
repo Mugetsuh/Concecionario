@@ -21,19 +21,23 @@ public class Vehiculo {
     protected int numRuedas;
     protected float precio;
     protected int asientos;
+    protected int cantidad;
 
-    public Vehiculo(String marca, String referencia, String color, int modelo, float precio, int asientos, String alimentacion, String transmision, int numRuedas, String categoria) {
+    public Vehiculo(String categoria, String marca, String referencia, String color, int modelo, String alimentacion, String transmision, int numRuedas, float precio, int asientos, int cantidad) {
+        this.categoria = categoria;
         this.marca = marca;
         this.referencia = referencia;
         this.color = color;
         this.modelo = modelo;
-        this.precio = precio;
-        this.asientos = asientos;
         this.alimentacion = alimentacion;
         this.transmision = transmision;
         this.numRuedas = numRuedas;
-        this.categoria = categoria;
+        this.precio = precio;
+        this.asientos = asientos;
+        this.cantidad = cantidad;
     }
+
+    
     
     public String getMarca() {
         return marca;
