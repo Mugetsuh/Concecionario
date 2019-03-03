@@ -18,7 +18,7 @@ public class Inventario {
     private int cantidadVehiculo;
     Scanner sc = new Scanner(System.in);
     public Vehiculo vehiculo;
-    Menu m = new Menu();
+
 
     String categoria, marca, referencia, color, alimentacion, transmision;
     int modelo, numRuedas, asientos, opcion, marchas;

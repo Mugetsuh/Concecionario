@@ -22,7 +22,9 @@ public class Menu {
     
     public void principal(ArrayList<Vehiculo> listaVehiculo){
         Inventario inv=new Inventario();
+        Ventas venta =new Ventas();
         int opcion = 0;
+        do{
         System.out.println("Bienvenido al concesionario UdeC.");
         System.out.println("Que actividad desea realizar: ");
         System.out.println("1. Agregar Vehiculo.");
@@ -36,7 +38,7 @@ public class Menu {
                 listaVehiculo=inv.agregar(listaVehiculo);
                 break;
             case 2:
-                //ventas
+                listaVehiculo=venta.comprarVehiculo(listaVehiculo);
                 break;
             case 3:
                 //vehiculo mas vendido
@@ -47,6 +49,7 @@ public class Menu {
                 principal(listaVehiculo);
             
         }
+        }while(opcion!=5);
         
     }
 }
