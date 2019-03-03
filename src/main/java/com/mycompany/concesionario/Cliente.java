@@ -6,7 +6,7 @@
 package com.mycompany.concesionario;
 
 /**
- *Calse que contiene los atributos del cliente y sus acciones
+ *Clase que contiene los atributos del cliente y sus acciones
  * @author orlando
  * @version 1.0
  */

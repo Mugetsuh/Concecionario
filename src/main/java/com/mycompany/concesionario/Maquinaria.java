@@ -35,6 +35,7 @@ public class Maquinaria extends Vehiculo{
      * @param transmision inidica el numero de transmisiones que tiene el vehiculo
      * @param numRuedas indica cantidad de ruebas del vehiculo
      * @param categoria indica la categoria del vehiculo
+     * @param cantidad indica la cantidad de vehiculos que exiten en bodega del auto
      */
     public Maquinaria(int capacidadCarga, int velocidades, String categoria, String marca, String referencia, String color, int modelo, String alimentacion, String transmision, int numRuedas, float precio, int asientos, int cantidad) {
         super(categoria, marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);

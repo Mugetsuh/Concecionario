@@ -8,6 +8,7 @@ package com.mycompany.concesionario;
 /**
  *Clase padre usuario encargada de contener los datos y actividades de los usuario de sistema 
  * @author orlando
+ * @version 1.0
  */
 public class Usuarios {
     /**
@@ -33,14 +34,15 @@ public class Usuarios {
         this.apellido = apellido;
         this.documento = documento;
     }
-    
+ 
     public String getNombre() {
         return nombre;
     }
+ 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+ 
     public String getApellido() {
         return apellido;
     }

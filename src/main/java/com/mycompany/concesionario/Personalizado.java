@@ -7,7 +7,6 @@ package com.mycompany.concesionario;
 
 /**
  * clase encargada que contiene los vehiculos personalizados
- *
  * @author orlando
  * @version 1.0
  */
@@ -44,6 +43,7 @@ public class Personalizado extends Vehiculo {
      * vehiculo
      * @param numRuedas indica cantidad de ruebas del vehiculo
      * @param categoria indica la categoria del vehiculo
+     * @param cantidad indica la cantidad de autos perzonalizados en esa referencia y marca..
      */
     public Personalizado(int alturaRin, String formaPuertas, String tubosEscape, String categoria, String marca, String referencia, String color, int modelo, String alimentacion, String transmision, int numRuedas, float precio, int asientos, int cantidad) {
         super(categoria, marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);

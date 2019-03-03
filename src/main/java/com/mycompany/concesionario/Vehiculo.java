@@ -6,23 +6,70 @@
 package com.mycompany.concesionario;
 
 /**
- *
- * @author orlan
+ *Clase padre vehiculo contiene los atributos comunes para deportivo, estandar, maquinariay perzonalizado hijos
+ * @author orlando
+ * @version 1.0
  */
 public class Vehiculo {
-    
+    /**
+     * VAriable que indica la categoria del auto
+     */
     protected String categoria;
+    /**
+     * Variable que indica la marca del auto
+     */
     protected String marca;
+    /**
+     * Variable que indica la referenciad el auto
+     */
     protected String referencia;
+    /**
+     * Variable que indica el color del auto
+     */
     protected String color;
+    /**
+     * Variable que indica el modelo del auto
+     */
     protected int modelo;
+    /**
+     * Variable que indica la alimentacion del auto
+     */
     protected String alimentacion;
+    /**
+     * Vartiable que indica transmision del vehiculo
+     */
     protected String transmision;
+    /**
+     * Variable que indica el numero de ruedas del auto
+     */
     protected int numRuedas;
+    /**
+     * Variable que indica el precio del auto
+     */
     protected float precio;
+    /**
+     * Variable que indica las sillas del auto
+     */
     protected int asientos;
+    /**
+     * Variable que indica la cantidad de autos 
+     */
     protected int cantidad;
-
+    /**
+     * Conatructor que inicializa todos los atributos de las clase
+     * @param marca indica la marca del vehiculo
+     * @param referencia indica la referencia del vehiculo
+     * @param color indica el color de vehiculo
+     * @param modelo indica el modelo del vehiculo
+     * @param precio indica el costo del vehiculo
+     * @param asientos indica cantidad de sillas que posee el vehiculo
+     * @param alimentacion indica el combustibles que usa el vehiculo
+     * @param transmision inidica el numero de transmisiones que tiene el
+     * vehiculo
+     * @param numRuedas indica cantidad de ruebas del vehiculo
+     * @param categoria indica la categoria del vehiculo
+     * @param cantidad indica la cantidad de autos perzonalizados en esa referencia y marca..
+     */
     public Vehiculo(String categoria, String marca, String referencia, String color, int modelo, String alimentacion, String transmision, int numRuedas, float precio, int asientos, int cantidad) {
         this.categoria = categoria;
         this.marca = marca;
