@@ -6,15 +6,39 @@
 package com.mycompany.concesionario;
 
 /**
- *
- * @author orlan
+ *clase encargada que contiene los vehiculos personalizados
+ * @author orlando
+ * @version 1.0
  */
 public class Personalizado extends Vehiculo{
-    
+    /**
+     * Variable encargada de indicar la altura de los rines en el vehiculo
+     */
     private int alturaRin;
+    /**
+     * variables encaraga de describir como se abren las puertas en el vehiculo
+     */
     private String formaPuertas;
+    /**
+     * Variable encarga de describir los tubos de escape en el vehiculo
+     */
     private String tubosEscape;
-
+    /**
+     * Contructor recibe los aprametros de la clase padre vehiculo e inicializa sus propios atributos 
+     * @param alturaRin indica la altura de los rines en el vehiculo
+     * @param formaPuertas indica como se abren las puertas
+     * @param tubosEscape indica cuantos tubos de escape posee el vehiculo
+     * @param marca indica la marca del vehiculo
+     * @param referencia indica la referencia del vehiculo
+     * @param color indica el color de vehiculo
+     * @param modelo indica el modelo del vehiculo
+     * @param precio indica el costo del vehiculo
+     * @param asientos indica cantidad de sillas que posee el vehiculo
+     * @param alimentacion indica el combustibles que usa el vehiculo
+     * @param transmision inidica el numero de transmisiones que tiene el vehiculo
+     * @param numRuedas indica cantidad de ruebas del vehiculo
+     * @param categoria indica la categoria del vehiculo
+     */
     public Personalizado(int alturaRin, String formaPuertas, String tubosEscape, String marca, String referencia, String color, int modelo, float precio, int asientos, String alimentacion, String transmision, int numRuedas, String categoria) {
         super(marca, referencia, color, modelo, precio, asientos, alimentacion, transmision, numRuedas, categoria);
         this.alturaRin = alturaRin;

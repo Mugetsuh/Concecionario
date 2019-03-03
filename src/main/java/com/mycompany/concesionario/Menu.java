@@ -9,17 +9,24 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- *
- * @author orlan
+ * clase encargada de mostrar al usuario las posibles actividades que puede realizar.
+ * @author orlando
+ * @version 1.0
  */
 public class Menu {
     Scanner sc = new Scanner(System.in);
     ArrayList<Vehiculo> listaVehiculo; 
+    /**
+     * metodo sin retorno usado para inicializar la lista de vehiculos
+     */
     public void iniciar(){
         listaVehiculo=new ArrayList<>();
         principal(listaVehiculo);
     }
-    
+    /**
+     * metodo sin retorno encargado de mostrar menu al usuario con posibles actividades ha realizar
+     * @param listaVehiculo indica el listado de vehiculos disponibles.
+     */
     public void principal(ArrayList<Vehiculo> listaVehiculo){
         Inventario inv=new Inventario();
         Ventas venta =new Ventas();

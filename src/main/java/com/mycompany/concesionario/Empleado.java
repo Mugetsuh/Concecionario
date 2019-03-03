@@ -6,11 +6,17 @@
 package com.mycompany.concesionario;
 
 /**
- *
- * @author orlan
+ *Clase encargada de contener los atributos del usuario empleado vendedor
+ * @author orlando
+ * @version 1.0
  */
 public class Empleado extends Usuarios{
-
+    /**
+     * Contructor encargado de recibir los atributos de la clase padre usuario
+     * @param  nombre indica el nombre del empleado vendedor
+     * @param apellido indica el apellido del empleado vendedor
+     * @param documento indica el numero de documento del empleado vendedor
+     */
     public Empleado(String nombre, String apellido, float documento) {
         super(nombre, apellido, documento);
     }
