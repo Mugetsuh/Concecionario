@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- *
- * @author orlan
+ * clase Inventario esta clase contiene todo el inventario de carros existentes en el programa ademas cuenta con el stck de seguridad indicando cuando se debe realizar la compra de nuevos carros
+ * @author orlando
+ * @version 1.0
  */
 public class Inventario {
-
     private int stockMin;
     private int cantidadVehiculo;
     Scanner sc = new Scanner(System.in);
@@ -23,7 +23,7 @@ public class Inventario {
     String categoria, marca, referencia, color, alimentacion, transmision;
     int modelo, numRuedas, asientos, opcion, marchas;
     float precio;
-
+    
     public ArrayList<Vehiculo> agregar(ArrayList<Vehiculo> listaVehiculos) {
         System.out.println("Menu para agregar un Vehiculo.");
         do {
@@ -105,9 +105,9 @@ public class Inventario {
         numRuedas = sc.nextInt();
         System.out.println("Digite el Precio del Vehiculo: ");
         precio = sc.nextFloat();
-        System.out.println("Digite el Numero de Asientos del vehiculo: ");
+        System.out.println("Digite el Numero de Asientos del  Vehiculo: ");
         asientos = sc.nextInt();
-        System.out.println("Digite la Capacidad de Carga del Vehiculo");
+        System.out.println("Digite la Capacidad en Toneladas de Carga del Vehiculo");
         int carga = sc.nextInt();
         System.out.println("Digite la Cantidad de Marchas del Vehiculo");
         marchas = sc.nextInt();

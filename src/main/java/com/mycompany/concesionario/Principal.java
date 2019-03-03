@@ -8,12 +8,14 @@ package com.mycompany.concesionario;
 import java.util.ArrayList;
 
 /**
- *
- * @author orlan
+ * clase principal usada unicamente para llamar la clase menu
+ * @author orlando y angie
+ * @version 1.0
  */
 public class Principal {
 
     /**
+     * metodo estatico main para accionar el programa
      * @param args the command line arguments
      */
     public static void main(String[] args) {
