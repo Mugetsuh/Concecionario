@@ -40,6 +40,7 @@ public class Ventas {
             listas.facturas.add(fac);
             Inventario inv = new Inventario();
             listas = inv.descontarAuto(listas, numVehiculo, cantidadUnidades);
+            
             System.out.println("Desea comprar otro vehiculo s/n: ");
             opcion=sc.next().charAt(0);
         } while (opcion=='s');

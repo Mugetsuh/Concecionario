@@ -19,18 +19,29 @@ public class Menu {
 
     Scanner sc = new Scanner(System.in);
     Listas listas;
-    ArrayList<Vehiculo> vehiculos;
-    ArrayList<Factura> facturas;
-    ArrayList<Usuarios> usuarios;
+    ArrayList<Vehiculo> vehiculos=new ArrayList<>();
+    ArrayList<Factura> facturas=new ArrayList<>();
+    ArrayList<Usuarios> usuarios=new ArrayList<>();
 
     /**
      * metodo sin retorno usado para inicializar la lista de vehiculos
      */
     public void iniciar() {
         listas = new Listas(vehiculos, facturas, usuarios);
+        usuarios();
+        vehiculo();
         principal(listas);
     }
-
+    public void usuarios(){
+        Empleado emp1=new  Empleado("Orlando", "Mora", 1234567);
+        Empleado emp2=new  Empleado("Angie", "Paez", 78901);
+        listas.usuarios.add(emp1);
+        listas.usuarios.add(emp2);
+    }
+    public void vehiculo(){
+        Vehiculo carro1=new Estandar(5,"chevrolet", "spark", "rojo", 2019, "gasolina", "manual", 4,2500000 , 4, 4);
+        listas.vehiculos.add(carro1);
+    }
     /**
      * metodo sin retorno encargado de mostrar menu al usuario con posibles
      * actividades ha realizar

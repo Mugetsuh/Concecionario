@@ -35,8 +35,8 @@ public class Estandar extends Vehiculo {
      * @param numRuedas indica cantidad de ruebas del vehiculo
      * @param categoria indica la categoria del vehiculo
      */
-    public Estandar(int velocidades, String categoria, String marca, String referencia, String color, int modelo, String alimentacion, String transmision, int numRuedas, float precio, int asientos, int cantidad) {
-        super(categoria, marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);
+    public Estandar(int velocidades, String marca, String referencia, String color, int modelo, String alimentacion, String transmision, int numRuedas, float precio, int asientos, int cantidad) {
+        super("Estandar", marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);
         this.velocidades = velocidades;
     }
 

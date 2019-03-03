@@ -53,7 +53,9 @@ public class Inventario {
                     System.out.println("Opcion no valida");
                     break;
             }
-        } while (opcion != 5);
+            System.out.println("Desea agreagar otro vehiculo s/n: ");
+            
+        } while (sc.next().charAt(0)=='s');
         return listas;
     }
     public Listas descontarAuto (Listas listas,int posicion, int cantidadVeh){
@@ -89,7 +91,7 @@ public class Inventario {
         marchas = sc.nextInt();
         System.out.println("Digite la Cantidad de Vehiculos que va ha ingresar de "+marca+": ");
         cantidad = sc.nextInt();
-        vehiculo = new Estandar(marchas, categoria, marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);
+        vehiculo = new Estandar(marchas, marca, referencia, color, modelo, alimentacion, transmision, numRuedas, precio, asientos, cantidad);
         listas.vehiculos.add(vehiculo);
         return listas;
     }
