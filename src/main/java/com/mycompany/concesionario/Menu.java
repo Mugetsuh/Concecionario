@@ -110,6 +110,7 @@ public class Menu {
                     break;
                 case 5:
                     ventaReferencia();
+                    break;
                 case 6:
                     System.out.println("hasta la proxima");
                     break;
